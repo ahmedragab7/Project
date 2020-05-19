@@ -1,0 +1,8 @@
+prefix=/home/ahmed/stick_ws/devel
+
+Name: rviz_imu_plugin
+Description: Description of rviz_imu_plugin
+Version: 1.1.7
+Cflags: 
+Libs: -L/home/ahmed/stick_ws/devel/lib 
+Requires: rviz

@@ -1,0 +1,15 @@
+  <launch>
+    <!-- Turtlesim Node-->
+    <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
+
+    <node name="turtle1_tf_broadcaster" pkg="learning_tf" type="turtle_tf_broadcaster.py" respawn="false" output="screen" >
+      <param name="turtle" type="string" value="stick_base" />
+    </node>
+
+    <node pkg="learning_tf" type="lidar_tf.py"
+          name="broadcaster_fixed" />
+    
+    
+
+  </launch>

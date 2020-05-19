@@ -1,0 +1,8 @@
+prefix=/home/ahmed/stick_ws/devel
+
+Name: map_server
+Description: Description of map_server
+Version: 1.14.5
+Cflags: -I/home/ahmed/stick_ws/src/map_server/include
+Libs: -L/home/ahmed/stick_ws/devel/lib -lmap_server_image_loader
+Requires: roscpp nav_msgs tf2

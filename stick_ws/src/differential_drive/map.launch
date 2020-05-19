@@ -1,0 +1,5 @@
+<launch>
+<node name="map_server" pkg="map_server" type="map_server" args="/home/ahmed/stick_ws/src/map_server/sha2a.yaml"/>
+<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser4"
+    args="7.0 0.0 0.1 0.0 0.0 180.0 /base_link /map 40" />
+</launch>

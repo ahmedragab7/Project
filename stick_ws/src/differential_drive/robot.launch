@@ -1,0 +1,61 @@
+<launch>
+
+
+
+
+
+
+
+
+<node pkg="differential_drive" type="diff_tf2.py" name="diff_tf">
+      <rosparam param="base_width">0.31</rosparam>
+       
+</node>
+
+
+
+
+
+
+
+
+<node pkg="differential_drive" type="twist_to_motors.py" name="twist_to_motors">
+    </node>  
+ 
+
+
+
+<node pkg="rosserial_python" type="serial_node.py" name="arduino_encoder" output="screen">
+  <param name="port" value="/dev/ttyACM0"/>
+  <param name="baud" value="57600"/>
+</node>
+
+
+<node pkg="rosserial_python" type="serial_node.py" name="arduino_motor" output="screen">
+  <param name="port" value="/dev/ttyACM1"/>
+  <param name="baud" value="57600"/>
+</node>
+
+
+
+
+<include file="/home/ahmed/stick_ws/src/ydlidar_ros-master/launch/X4.launch" />
+
+
+
+<node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
+  <param name="output_frame" value="odom"/>
+  <param name="base_footprint_frame" value="base_link"/>
+  <param name="freq" value="50.0"/>
+  <param name="sensor_timeout" value="1.0"/>  
+  <param name="odom_used" value="true"/>
+  <param name="imu_used" value="false"/>
+  <param name="vo_used" value="false"/>
+
+</node>
+
+
+
+
+</launch>
+

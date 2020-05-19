@@ -1,0 +1,2 @@
+amcl:avoid_obs:differential_drive:imu_tools/imu_complementary_filter:imu_tools/imu_filter_madgwick:imu_tools/imu_tools:imu_tools/rviz_imu_plugin:learning_tf:map_server:move_base:mpu6050_serial_to_imu:robot_pose_ekf:urdf_tutorial-master:ydlidar_ros-master
+-DCATKIN_DEVEL_PREFIX=/home/ahmed/stick_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ahmed/stick_ws/install -G Unix Makefiles
