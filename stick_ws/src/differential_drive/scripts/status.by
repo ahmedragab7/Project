@@ -4,21 +4,27 @@ import rospy
 import actionlib
 from actionlib_msgs.msg import GoalStatusArray
 from geometry_msgs.msg import Twist
-bool first_time=False
-
+first_time=False
+second_time=False
 def callback(data):
-    if((data.status_list[0].status ==0) and (first_time==False)):
-        call(["aplay","Desktop/54121198.wav"])#welcome talk
-    elif(data.status_list[0].status == 1):
-        call(["aplay","Desktop/54121198.wav"]) #goal accepted
+    global first_time
+    global second_time
+    if (first_time==False):
+        call(["aplay","Desktop/hi.wav"])#welcome talk
+        first_time=True
+    if not data.status_list:
+        print("list is empty")
+    elif(data.status_list[0].status == 1) and (second_time==False):
+        call(["aplay","Desktop/goal.wav"]) #goal accepted
+        second_time==True
     #rospy.loginfo(rospy.get_caller_id() + "I heard %d", data.status_list[0].status)
     
 
 def vel_callback(vel_msg):
     if(vel_msg.angular.z >= 1):
-        call(["aplay","Desktop/54121198.wav"])#choose the right one
+        call(["aplay","Desktop/turn_right.wav"])#choose the right one
     if(vel_msg.angular.z <= -1):
-        call(["aplay","Desktop/54121198.wav"])#choose the right one
+        call(["aplay","Desktop/turn_left.wav"])#choose the right one
 
 
 def listener():

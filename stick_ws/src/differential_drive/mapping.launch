@@ -1,5 +1,21 @@
 <launch>
 
+<node pkg="rosserial_python" type="serial_node.py" name="arduino_encoder" output="screen">
+  <param name="port" value="/dev/ttyACM0"/>
+  <param name="baud" value="57600"/>
+</node>
+
+
+<node pkg="rosserial_python" type="serial_node.py" name="arduino_motor" output="screen">
+  <param name="port" value="/dev/ttyACM1"/>
+  <param name="baud" value="57600"/>
+</node>
+
+
+
+
+<include file="/home/ahmed/stick_ws/src/ydlidar_ros-master/launch/X4.launch" />
+
 
 <node pkg="differential_drive" type="diff_tf2.py" name="diff_tf">
       <rosparam param="base_width">0.31</rosparam>

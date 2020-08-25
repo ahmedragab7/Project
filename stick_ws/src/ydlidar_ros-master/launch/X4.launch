@@ -17,3 +17,5 @@
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser4"
     args="0.0 0.0 0.1 0.0 0.0 0.0 /base_link /laser_frame 40" />
 </launch>
+
+  < node pkg="differential_drive" name="listener" type="status.py" output="screen"/>
