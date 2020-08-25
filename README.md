@@ -1,6 +1,6 @@
 # Robot to guid the blind by ROS 
 
-#inspiration  
+# inspiration  
 Briefly i found that all devices made for the blind are limmited in warning him when he is about to collide , but what if he does't even know where the place that want to go is ? so my project is solving this problem 
 
 
