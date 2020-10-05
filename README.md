@@ -24,9 +24,9 @@ then we need to change the name of map in directory :*stick_ws/src/differential_
 
 now we are ready to navigate in this map :  
 1- **roslaunch differential_drive robot.launch**  
-2- **roslaunch differential_drive move_base.launch** 
-3- **rosrun rviz rviz**
-4- choose the initial pose and final pose by : **2D Pose Estimate** and **2D Nave Goal** respectively  
+2- **roslaunch differential_drive move_base.launch**   
+3- **rosrun rviz rviz**  
+4- choose the initial pose and final pose by : **2D Pose Estimate** and **2D Nave Goal** respectively    
 
 the last thing is object detection :
 1- **roslaunch raspicam_node camerav1_1280x720.launch**  
