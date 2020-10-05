@@ -31,6 +31,7 @@ now we are ready to navigate in this map :
 the last thing is object detection :
 1- **roslaunch raspicam_node camerav1_1280x720.launch**
 2- **rolaunch tensorflow_object_detector_ros object_detection_edited.launch**
+3-**rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image**
 
 # the project video on youtube :https://youtu.be/hQke3YzZzvc  
 [![robot to guide the blind by ROS (robotics operating system)](https://img.youtube.com/vi/hQke3YzZzvc/0.jpg)](https://www.youtube.com/watch?v=hQke3YzZzvc)
