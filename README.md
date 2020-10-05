@@ -29,7 +29,7 @@ now we are ready to navigate in this map :
 4- choose the initial pose and final pose by : **2D Pose Estimate** and **2D Nave Goal** respectively  
 
 the last thing is object detection :
-1- **roslaunch raspicam_node camerav1_1280x720.launch**
+1- **roslaunch raspicam_node camerav1_1280x720.launch**  
 2- **rolaunch tensorflow_object_detector_ros object_detection_edited.launch**
 
 3-**rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image**  
