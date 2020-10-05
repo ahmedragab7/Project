@@ -17,18 +17,18 @@ Briefly i found that all devices made for the blind are limmited in warning him 
 
 first : you need to build a map by:
 1- **roslaunch differential_drive mapping.launch**
-2-type in new terminal : **rosrun gmapping slam_gmapping**
+2-type in new terminal : **rosrun gmapping slam_gmapping**  
 3- After finishing the map type :**rosrun map_server map_saver -f <map_name>
 
 then we need to change the name of map in directory :*stick_ws/src/differential_drive/move_base.launch* to the new map name  
 
-now we are ready to navigate in this map :  
+now we are ready to navigate in this map :    
 1- **roslaunch differential_drive robot.launch**  
 2- **roslaunch differential_drive move_base.launch**   
 3- **rosrun rviz rviz**  
 4- choose the initial pose and final pose by : **2D Pose Estimate** and **2D Nave Goal** respectively    
 
-the last thing is object detection :
+the last thing is object detection :  
 1- **roslaunch raspicam_node camerav1_1280x720.launch**  
 2- **rolaunch tensorflow_object_detector_ros object_detection_edited.launch**
 
