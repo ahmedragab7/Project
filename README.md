@@ -16,7 +16,7 @@ Briefly i found that all devices made for the blind are limmited in warning him 
 # how to use the robot :  
 
 first : you need to build a map by:
-1- **roslaunch differential_drive mapping.launch**
+1- **roslaunch differential_drive mapping.launch**  
 2-type in new terminal : **rosrun gmapping slam_gmapping**  
 3- After finishing the map type :**rosrun map_server map_saver -f <map_name>
 
